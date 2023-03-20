@@ -37,7 +37,13 @@ API_ENDPOINT = `https://api.edamam.com/api/recipes/v2?type=public&q=${ingredient
 
 The search-term that the user entered in the input can be used in the API call.
 
-See query parameter in API URL: `[q=${ingredient](https://api.edamam.com/api/recipes/v2?type=public&q=${INGREDIENT}&app_id=${APP_ID}&app_key=${API_KEY}&imageSize=SMALL&random=true&field=label&field=source&field=url&field=ingredientLines&field=ingredients&field=calories&field=totalTime&field=mealType)}` → where `ingredient` is the search-term coming from the input.
+See query parameter in API URL: 
+```javascript
+q=${ingredient}
+
+https://api.edamam.com/api/recipes/v2?type=public&q=${INGREDIENT}&app_id=${APP_ID}&app_key=${API_KEY}&imageSize=SMALL&random=true&field=label&field=source&field=url&field=ingredientLines&field=ingredients&field=calories&field=totalTime&field=mealType
+```
+ → where `ingredient` is the search-term coming from the input.
 
 1. Clicking on a recipe shows the details of that recipe
 
