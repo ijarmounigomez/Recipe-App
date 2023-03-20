@@ -1,5 +1,5 @@
 module.exports = {
-    roots: ["<rootDir>/src"],
+    roots: ["<rootDir>"],
     collectCoverageFrom: [
         "src/**/*.{js,jsx,ts,tsx}",
         "!src/**/*.d.ts",
@@ -11,7 +11,7 @@ module.exports = {
     ],
     setupFilesAfterEnv: ["./config/jest/setupTests.js"],
     testEnvironment: "jsdom",
-    modulePaths: ["<rootDir>/src"],
+    modulePaths: ["<rootDir>"],
     transform: {
         "^.+\\.(ts|js|tsx|jsx)$": "@swc/jest",
         "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
@@ -22,7 +22,7 @@ module.exports = {
         "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$",
         "^.+\\.module\\.(css|sass|scss)$",
     ],
-    modulePaths: ["<rootDir>/src"],
+    modulePaths: ["<rootDir>"],
     moduleNameMapper: {
         "^react-native$": "react-native-web",
         "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy",
