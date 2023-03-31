@@ -14,24 +14,23 @@ beforeAll(() => server.listen());
 // Stop the server after the tests are done
 afterAll(() => server.close());
 
-describe('Recipe App', () => {
-	it('shows a counter that can be increased', async () => {
+describe('Recipe Application', () => {
+	it('should render the recipe application containing the App component', async () => {
+		
 		render(<App />);
 
-		const counterButton = screen.getByRole('button');
+		expect(screen.queryByTestId('form-display')).toBeVisible(); //check form is displayed after the component is rendered
 
-		expect(counterButton).toHaveTextContent('0');
 
-		await userEvent.click(counterButton);
-		expect(counterButton).toHaveTextContent('1');
 	});
+
 
 	it.skip('renders recipes fetched from the API', async () => {
 		// Render the component
 		render(<App />);
 
 		await waitFor(() => {
-			// expect(screen.getByText('Sammie\'s Bacon Tomato Pasta')).toBeInTheDocument(); // This test will fail // TODO: Make it pass ;)
+			expect(screen.getByText('Sammie\'s Bacon Tomato Pasta')).toBeInTheDocument(); // This test will fail // TODO: Make it pass ;)
 		});
 	});
 });

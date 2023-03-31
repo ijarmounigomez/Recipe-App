@@ -13,10 +13,10 @@ module.exports = {
     testEnvironment: "jsdom",
     modulePaths: ["<rootDir>"],
     transform: {
-        "^.+\\.(ts|js|tsx|jsx)$": "@swc/jest",
         "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
         "^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)":
             "<rootDir>/config/jest/fileTransform.js",
+        "^.+\\.(ts|js|tsx|jsx)$": "@swc/jest", // Jest doesn't support ES6 modules.
     },
     transformIgnorePatterns: [
         "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$",
